@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+# import functions for migration
+source hcloud-server-migration.sh 
+
+# ======================================== #
+# required data to migrate a hcloud server #
+# ======================================== #
+
+# id of the server you want to change
+SERVER_ID=
+
+# name of server-type you want to use eg. cx21
+SERVER_TYPE_TARGET=
+
+# API-Key of your hcloud project
+API_KEY= 
+
+# run the migration with given configuration
+doMigration
+
+# hcloud restarts the server after migration is done!
+# if you want to keep your server off, you need to shut it down again
+# 
+# uncomment these two lines to shutdown after migration
+
+# sleep 10 # wait some seconds until server is able to receive the shutdown command
+# shutdown

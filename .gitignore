@@ -1,0 +1,2 @@
+*.sh
+!hcloud-server-migration.sh
